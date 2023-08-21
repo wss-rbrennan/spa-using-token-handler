@@ -18,7 +18,7 @@ app.use((request: express.Request, response: express.Response, next: express.Nex
 
     let policy = "default-src 'none';";
     policy += " script-src 'self';";
-    policy += ` connect-src 'self' ${configuration.apiBaseUrl};`;
+    policy += ` connect-src 'self' ${configuration.spaBaseUrl};`;
     policy += " img-src 'self';";
     policy += " style-src 'self' https://cdn.jsdelivr.net;";
     policy += " object-src 'none'";

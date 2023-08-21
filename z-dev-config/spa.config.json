@@ -1,0 +1,7 @@
+{
+    "businessApiBaseUrl": "https://api.featbit.example",
+    "spaBaseUrl": "https://featbit.example/spa",
+    "oauth": {
+        "oauthAgentBaseUrl": "https://featbit.example/oauth-agent"
+    }
+}

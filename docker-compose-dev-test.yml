@@ -1,0 +1,30 @@
+name: featbit-dev
+version: '3.8'
+services:
+  #
+  # The web host simply serves static content
+  #
+  webhost:
+    image: webhost:1.0.0
+    hostname: webhost-example
+    networks:
+      - featbit-network
+    ports:
+      - "3000:3000"
+    volumes:
+      # - ./components/webhost/config.json:/usr/webhost/config.json
+      # - ./components/spa/config.json:/usr/webhost/content/config.json
+      - ./z-dev-config/web.config.json:/usr/webhost/config.json
+      - ./z-dev-config/spa.config.json:/usr/webhost/content/config.json
+      - ./z-dev-config/featbit-example4.crt:/usr/webhost/certs/featbit-example4.pem
+      - ./z-dev-config/featbit-example4-pkcs-key.pem:/usr/webhost/certs/featbit-example4-pkcs-key.pem
+    environment:
+      NODE_ENV: 'production'
+    # command: ["tail", "-f", "/dev/null"]
+
+networks:
+    featbit-network:
+      driver: bridge
+      ipam:
+        config:
+          - subnet: 172.1.0.0/16      

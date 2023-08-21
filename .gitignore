@@ -4,3 +4,8 @@ dist
 resources
 .DS_Store
 spa/cypress/reports/
+z-dev-config/*.key
+z-dev-config/*.crt
+z-dev-config/*.jks
+z-dev-config/*.pem
+z-dev-config/*.p12

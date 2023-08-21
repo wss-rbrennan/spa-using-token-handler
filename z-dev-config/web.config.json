@@ -1,0 +1,5 @@
+{
+    "port": 3000,
+    "apiBaseUrl": "https://api.featbit.example/api",
+    "spaBaseUrl": "https://featbit.example/spa"
+}
